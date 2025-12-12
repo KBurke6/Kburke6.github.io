@@ -164,8 +164,8 @@ Portfolio
     <div class="projects">
 
       <div class="project-card">
-        <h3>Project One</h3>
-        <p>A brief description of what this project does and why it’s cool.</p>
+        <h3>Animation Hotspots</h3>
+        <p>This project was created to have an understanding of where animation jobs are located within America today and how any are in those certain locations. It took alot of work getting the code to to what i wanted but we eventually got there.</p>
         <a href="#">View on GitHub →</a>
       </div>
 
