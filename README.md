@@ -166,7 +166,7 @@ Portfolio
       <div class="project-card">
         <h3>Animation Hotspots</h3>
         <p>This project was created to have an understanding of where animation jobs are located within America today and how any are in those certain locations. It took alot of work getting the code to to what i wanted but we eventually got there.</p>
-        <a href="#">View on GitHub →</a>
+        <a href="#">file:///C:/Users/Burke003/Desktop/BurkeProject2.2/AnimationHotspots.html →</a>
       </div>
 
       <div class="project-card">
@@ -188,9 +188,7 @@ Portfolio
   <section id="about">
     <h2>About Me</h2>
     <p style="max-width:700px;margin:auto;text-align:center;">
-      I am a developer focused on problem-solving, clean code, and useful software.
-      I enjoy working with modern tools and learning new technologies to
-      enhance my skills and deliver quality results.
+     Hi I am an 3d computer Animation majorfrom Columbia College Chicago who has is working to learn code to help round out my crafts. Welcome to my portfolio. .
     </p>
   </section>
 
@@ -198,13 +196,13 @@ Portfolio
   <section id="contact">
     <h2>Contact</h2>
     <p style="text-align:center;">
-      Feel free to reach out:Burke003@colum.edu  
+      Feel free to reach out: Burke003@colum.edu  
       <br /><br />
       <a href="mailto:Burke003@colum.edu" class="btn">Email Me</a>
     </p>
   </section>
 
   <footer>
-    © 2025 Your Name — All Rights Reserved.
+    © 2025 Keiran Burke — All Rights Reserved.
   </footer>
 
