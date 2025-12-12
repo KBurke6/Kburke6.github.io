@@ -178,7 +178,7 @@ Portfolio
       <div class="project-card">
         <h3>Random Number Generator</h3>
         <p> small random number generator code.</p>
-        <a href="#">View on GitHub →</a>
+        <a href="#">https://github.com/KBurke6/Random-number-Generator →</a>
       </div>
 
     </div>
