@@ -170,8 +170,8 @@ Portfolio
       </div>
 
       <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Another awesome thing you made, with a punchy description.</p>
+        <h3>Age limits for politicians</h3>
+        <p>Over the last 2 elections we have seen on both sides of the American political debate that the other sides elected president is too old and is unfit to lead. With both sides electing the oldest president in American history, in a row. There are reports of people holding office taking dementia and Alzheimer’s medications.</p>
         <a href="#">View on GitHub →</a>
       </div>
 
