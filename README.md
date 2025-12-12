@@ -166,7 +166,7 @@ Portfolio
       <div class="project-card">
         <h3>Animation Hotspots</h3>
         <p>This project was created to have an understanding of where animation jobs are located within America today and how any are in those certain locations. It took alot of work getting the code to to what i wanted but we eventually got there.</p>
-        <a href="#">file:///C:/Users/Burke003/Desktop/BurkeProject2.2/AnimationHotspots.html →</a>
+        <a href="#">https://github.com/KBurke6/Kburke6.github.io/blob/main/Animation%20Hotspots→</a>
       </div>
 
       <div class="project-card">
