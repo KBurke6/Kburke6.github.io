@@ -198,9 +198,9 @@ Portfolio
   <section id="contact">
     <h2>Contact</h2>
     <p style="text-align:center;">
-      Feel free to reach out:  
+      Feel free to reach out:Burke003@colum.edu  
       <br /><br />
-      <a href="mailto:your.email@example.com" class="btn">Email Me</a>
+      <a href="mailto:Burke003@colum.edu" class="btn">Email Me</a>
     </p>
   </section>
 
