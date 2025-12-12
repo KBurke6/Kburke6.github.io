@@ -176,8 +176,8 @@ Portfolio
       </div>
 
       <div class="project-card">
-        <h3>Project Three</h3>
-        <p>Something interesting worth showcasing in your portfolio.</p>
+        <h3>Random Number Generator</h3>
+        <p> small random number generator code.</p>
         <a href="#">View on GitHub →</a>
       </div>
 
