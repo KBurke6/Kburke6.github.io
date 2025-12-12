@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+  <meta charset="utf-8"> 
+
+  <title>Animation Jobs Hotspots US Map</title> 
+
+ 
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> 
+
+  <style> 
+
+    body, html { margin:0; padding:0; height:100%; } 
+
+    #map { width:100%; height:100%; } 
+
+  </style> 
+
+</head> 
+
+ 
+
+<body> 
+
+<div id="map"></div> 
+
+ 
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> 
+
+<script> 
+
+  const map = L.map('map').setView([37.8, -96], 4); 
+
+ 
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+
+    attribution: '© OpenStreetMap contributors' 
+
+  }).addTo(map); 
+
+ 
+
+  const jobData = { 
+
+    "CA": 32000, 
+
+    "NY": 2000, 
+
+    "TX": 700, 
+
+    "FL": 650, 
+
+    "WA": 3500, 
+
+    "IL": 2300 
+
+  }; 
+
+ 
+
+  function getColor(count) { 
+
+    return count > 2000 ? '#800026' : 
+
+           count > 1500 ? '#BD0026' : 
+
+           count > 1000 ? '#E31A1C' : 
+
+           count > 500  ? '#FC4E2A' : 
+
+           count > 100  ? '#FD8D3C' : 
+
+                           '#FEB24C'; 
+
+  } 
+
+ 
+
+  function style(feature) { 
+
+    const code = feature.id; 
+
+    const count = jobData[code] || 0; 
+
+ 
+
+    return { 
+
+      fillColor: getColor(count), 
+
+      weight: 1, 
+
+      opacity: 1, 
+
+      color: 'white', 
+
+      dashArray: '3', 
+
+      fillOpacity: 0.7 
+
+    }; 
+
+  } 
+
+ 
+
+ 
+
+  fetch('https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json') 
+
+    .then(res => res.json()) 
+
+    .then(geojson => { 
+
+      L.geoJson(geojson, { 
+
+        style: style, 
+
+ 
+
+      }).addTo(map); 
+
+    }); 
+
+ 
+
+ 
+
+  function addHotspotAnimation(stateCode, lat, lng, count) { 
+
+    if (count < 300) return; 
+
+ 
+
+    const circle = L.circle([lat, lng], { 
+
+      radius: 50000, 
+
+      color: getColor(count), 
+
+      fillColor: getColor(count), 
+
+      fillOpacity: 0.5 
+
+    }) 
+
+    .addTo(map) 
+
+    .bindTooltip(`${stateCode}: ${count} jobs`); 
+
+ 
+
+    let growing = true; 
+
+    let radius = 50000; 
+
+ 
+
+    setInterval(() => { 
+
+      radius = growing ? radius + 5000 : radius - 5000; 
+
+      if (radius > 80000) growing = false; 
+
+      if (radius < 50000) growing = true; 
+
+      circle.setRadius(radius); 
+
+    }, 300); 
+
+  } 
+
+ 
+
+  const stateCenters = { 
+
+    "CA": [36.7783, -119.4179], 
+
+    "NY": [43.0, -75.0], 
+
+    "TX": [31.0, -100.0], 
+
+    "FL": [27.9944, -81.7603], 
+
+    "WA": [47.7511, -120.7401], 
+
+    "IL": [40.6331, -89.3985] 
+
+  }; 
+
+ 
+
+  setTimeout(() => { 
+
+    for (const code in jobData) { 
+
+      if (stateCenters[code]) { 
+
+        addHotspotAnimation(code, stateCenters[code][0], stateCenters[code][1], jobData[code]); 
+
+      } 
+
+    } 
+
+  }, 1000); 
+
+ 
+
+</script> 
+
+</body> 
+
+</html> 
